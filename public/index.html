@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Moon Information</h1>
+    <div>
+        <ul>
+            <li>Moonrise</li>
+            <li>Moonset</li>
+            <li>Distance</li>
+        </ul>
+        <img src="moon.svg" alt="Moon">
+    </div>
+    <script>
+        const listItem = document.querySelectorAll('ul li');
+        getData();
+        async function getData() {
+            const res = await fetch('/getData')
+            const data = await res.json();
+            listItem[0].textContent = `Moonrise: ${data.moonrise}`;
+            listItem[1].textContent = `Moonrise: ${data.moonset}`;
+            listItem[2].textContent = `Moonrise: ${Math.floor(data.distance)} km`;
+        }
+    </script>
+</body>
+</html>

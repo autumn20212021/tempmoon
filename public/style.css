@@ -1,0 +1,29 @@
+body {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: pink;
+}
+h1 {
+    margin-bottom: 40px;
+    color: #3e3e3e;
+    text-align: center;
+}
+div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+img {
+    width: 140px;
+}
+ul li {
+    margin-bottom: 25px;
+    color: purple;
+    font-size: 26px;
+    font-weight: 700;
+}
+ul li:last-child {
+    margin-bottom: 0;
+}
